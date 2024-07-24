@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: 'Manrope';
     font-weight: 200;
 }
@@ -15,28 +23,45 @@ html,body{
 #main{
     width: 100vw;
     height: 100vh;
+    background: -o-linear-gradient(45deg, rgb(30, 125, 189), rgba(40, 40, 179, 0.829));
     background: linear-gradient(45deg, rgb(30, 125, 189), rgba(40, 40, 179, 0.829));
     padding: 2vw 0;
 }
 
 #container{
     width: 40%;
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
     min-height: fit-content;
     margin: auto;
     background: rgb(243, 243, 243);
     padding: 1.5vw 1vw 2vw 1vw;
-    box-shadow: #00000029 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    -webkit-box-shadow: #00000029 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            box-shadow: #00000029 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     border-radius: .5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 #head{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1vw;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #head h1 {
@@ -50,8 +75,12 @@ html,body{
 }
 
 .inputs{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 5vw;
     gap: 2vw;
     background-color: #edeef0;
@@ -86,20 +115,23 @@ html,body{
     border: none;
     cursor: pointer;
     border-radius: 100vw;
+    -webkit-transition: all cubic-bezier(0.19, 1, 0.22, 1) 300ms;
+    -o-transition: all cubic-bezier(0.19, 1, 0.22, 1) 300ms;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 300ms;
     font-weight: 500;
     font-size: 0.8vw;
     width: 6vw;
 }
 
-.del{
-    display: none;
-}
-
 ul{
     padding: 2vw 0 0 1.4vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: .8vw;
     width: 90%;
 }
@@ -108,7 +140,10 @@ ul li {
     position: relative;
     list-style: none;
     padding: 0 1vw;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     cursor: pointer;
     width: 100%;
     font-weight: 400;
@@ -163,10 +198,19 @@ ul li span:hover {
     }
 
     #main {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding-top: 30vw;
     }
 
@@ -216,9 +260,15 @@ ul li span:hover {
     }
 
     ul li{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
     }
 
     ul li::before{
