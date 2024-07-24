@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope';
+    font-weight: 200;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, rgb(30, 125, 189), rgba(40, 40, 179, 0.829));
+    padding: 2vw 0;
+}
+
+#container{
+    width: 40%;
+    min-height: fit-content;
+    margin: auto;
+    background: rgb(243, 243, 243);
+    padding: 1.5vw 1vw 2vw 1vw;
+    box-shadow: #00000029 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: .5vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#head{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#head h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500; 
+}
+
+#head img {
+    width: 3vw;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    margin-top: 5vw;
+    gap: 2vw;
+    background-color: #edeef0;
+    border-radius: 100vw;
+    overflow: hidden;
+    width: 35vw;
+}
+
+.task{
+    width: 30vw;
+    padding: 0.6vw 2vw;
+    font-size: .9rem;
+    border: none;
+    outline: none;
+    background-color: #edeef0;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.task:focus{
+    outline: none;
+}
+
+.btns{
+    margin-top: 1vw;
+}
+
+.btn{
+    padding: 0.7vw 1vw;
+    color: white;
+    background: #ff5945;
+    border: none;
+    cursor: pointer;
+    border-radius: 100vw;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 300ms;
+    font-weight: 500;
+    font-size: 0.8vw;
+    width: 6vw;
+}
+
+.del{
+    display: none;
+}
+
+ul{
+    padding: 2vw 0 0 1.4vw;
+    display: flex;
+    flex-direction: column;
+    gap: .8vw;
+    width: 90%;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    padding: 0 1vw;
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    left: -5%;
+    border-radius: 50%;
+}
+
+.checked{
+    text-decoration: line-through;
+    color: #bbbcbd;
+}
+
+ul li.checked::before{
+    background-image: url(./images/checked.png);
+
+}
+
+ul li span {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 1.8vw;
+    height: 3.5vh;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.3vw;
+    font-weight: 400;
+    color: black;
+}
+
+ul li span:hover {
+    background-color: #d5d5d6;
+}
+
+@media screen and (max-width: 360px) {
+    
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding-top: 30vw;
+    }
+
+    #container{
+        width: 88%;
+        padding: 4vw 2vw 8vw 2vw;
+        border-radius: 2vw;
+        margin: 0%;
+    }
+
+    #head{
+        gap: 2.5vw;
+    }
+    
+    #head h1 {
+        font-size: 1rem;
+    }
+
+    #head img {
+        width: 6vw;
+    }
+    
+    .inputs{
+        width: 80vw;
+        overflow: hidden;
+        background-color: #dcdddf;
+    }
+
+    .task{
+        width: 55vw;
+        padding: 1.8vw 5vw;
+        font-size: 1rem;
+        border-radius: 10vw;
+        background-color: #dcdddf;
+    }
+
+    .btn{
+        padding: 3.2vw 4vw;
+        font-size: 2.9vw;
+        width: 25vw;
+    }
+
+    ul{
+        margin-top: 2vw;
+        padding: 2.5vw 1.8vw 1.5vw 7.5vw;
+        gap: 2.5vw;
+    }
+
+    ul li{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    ul li::before{
+        width: 22px;
+        height: 22px;
+        left: -12.5%;
+    }
+
+    ul li span {
+        width: 1.8vw;
+        height: 3.5vh;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 5vw;
+        font-weight: 400;
+    }
+}
